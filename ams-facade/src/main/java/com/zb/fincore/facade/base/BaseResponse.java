@@ -1,7 +1,6 @@
 package com.zb.fincore.facade.base;
 
 import com.zb.fincore.facade.enums.RespEnum;
-
 import java.io.Serializable;
 
 /**

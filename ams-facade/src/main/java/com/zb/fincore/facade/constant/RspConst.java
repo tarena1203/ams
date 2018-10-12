@@ -1,12 +1,12 @@
-package com.zb.fincore.facade.enums;
+package com.zb.fincore.facade.constant;
 
-public enum RespEnum {
+public enum RspConst {
 	
 	REQ_CODE_SUCC("0000","请求成功"),
 	REQ_CODE_FAIL("9999","请求失败");
 	
 	//支付状态
-	public static final String PAY_STATUS_U = "U";//初始化
+	public static final String PAY_STATUS_U = "U";//初始
 	public static final String PAY_STATUS_P = "P";//处理中
 	public static final String PAY_STATUS_S = "S";//成功
 	public static final String PAY_STATUS_F = "F";//失败
@@ -21,7 +21,7 @@ public enum RespEnum {
 	 */
 	private String rspMsg;
 	
-	private RespEnum(String rspCode, String rspMsg){
+	private RspConst(String rspCode, String rspMsg){
 		this.rspCode=rspCode;
 		this.rspMsg=rspMsg;
 	}
@@ -54,8 +54,8 @@ public enum RespEnum {
 		this.rspMsg = rspMsg;
 	}
 	
-	public static RespEnum valueByRspCode(String rspCode){
-		for(RespEnum constants: RespEnum.values()){
+	public static RspConst valueByRspCode(String rspCode){
+		for(RspConst constants:RspConst.values()){
 			if(constants.getRspCode().equals(rspCode)){
 				return constants;
 			}
@@ -64,5 +64,5 @@ public enum RespEnum {
 		return null;
 		
 	}
-
+	
 }
