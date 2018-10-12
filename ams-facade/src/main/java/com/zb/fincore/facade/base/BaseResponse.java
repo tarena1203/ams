@@ -1,6 +1,6 @@
 package com.zb.fincore.facade.base;
 
-import com.zb.fincore.facade.constant.RspConst;
+import com.zb.fincore.facade.enums.RespEnum;
 
 import java.io.Serializable;
 
@@ -10,8 +10,8 @@ import java.io.Serializable;
  * @param <T>
  */
 public class BaseResponse<T> implements Serializable {
-	private String rspCode = RspConst.REQ_CODE_SUCC.getRspCode();
-	private String rspMsg = RspConst.REQ_CODE_SUCC.getRspMsg();
+	private String rspCode = RespEnum.REQ_CODE_SUCC.getRspCode();
+	private String rspMsg = RespEnum.REQ_CODE_SUCC.getRspMsg();
 	private T data;
 
 	public BaseResponse() {
